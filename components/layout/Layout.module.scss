@@ -1,0 +1,10 @@
+.layout {
+	position: relative;
+	> main {
+		background-color: white;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+		padding-top: 2rem; /* 40px */
+		padding-bottom: 2rem;
+	}
+}

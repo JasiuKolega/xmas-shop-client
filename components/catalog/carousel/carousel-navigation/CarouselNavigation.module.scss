@@ -1,0 +1,14 @@
+.navigation {
+	@apply flex justify-center items-center;
+
+	.arrow {
+		@apply bg-transparent text-light-gray hover:text-white transition duration-300;
+	}
+	.image {
+		@apply rounded-3xl shadow-xl cursor-pointer;
+	}
+	.image-active {
+		@apply shadow-none;
+		z-index: 2;
+	}
+}

@@ -1,0 +1,60 @@
+.card {
+	@apply w-[78%] grid grid-cols-3 gap-5 relative p-10 bg-light-gray;
+	border-radius: 2rem;
+
+	.info {
+		> h2 {
+			@apply text-2xl text-dark-gray font-bold leading-tight mb-3;
+
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		> div {
+			@apply mb-12;
+
+			> p {
+				@apply text-dark-gray;
+			}
+		}
+		> div > button {
+			@apply mx-3 rounded-xl;
+
+            &.active {
+                @apply shadow-xl transition-shadow duration-300;
+            }
+		}
+		> div > button > img {
+			@apply rounded-xl;
+		}
+	}
+
+	.image {
+		@apply flex justify-center text-center;
+
+		> div > img {
+			@apply rounded-full;
+			box-shadow: 0px 5px 100px -50px #6c946b;
+		}
+
+		> div > div {
+			@apply text-xl font-bold pt-5;
+		}
+	}
+
+	.variations {
+		.rating {
+			@apply flex items-center pb-5;
+
+			> span {
+				@apply text-sm mr-2 font-bold;
+			}
+		}
+
+        > div > button {
+            @apply mb-5;
+        }
+	}
+}

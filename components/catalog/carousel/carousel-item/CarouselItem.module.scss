@@ -1,0 +1,67 @@
+.item {
+	@apply relative rounded-3xl bg-light-gray h-[450px] mb-5;
+
+	.image {
+		@apply rounded-3xl shadow-xl;
+	}
+
+	.name {
+		@apply text-lg text-dark-gray mt-3 font-bold h-[4rem];
+	}
+
+	.description {
+		@apply flex items-center mt-5 text-dark-gray leading-6;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	> div {
+		@apply relative;
+	}
+
+	&.active {
+		@apply bg-green shadow-2xl shadow-green scale-[1.15] bg-no-repeat;
+		background-image: url('/patterns/carousel-pattern.png');
+		background-position: center -35px;
+		background-size: 120%;
+
+		&::before {
+			@apply w-full h-full absolute top-0 left-0 rounded-3xl;
+			content: '';
+			background-image: linear-gradient(0deg, #80cb93, rgba(61, 136, 52, 0.2));
+		}
+
+		.image-active {
+			@apply shadow-none;
+			z-index: 2;
+		}
+
+		.name-active {
+			@apply text-white text-2xl leading-8;
+			z-index: 2;
+		}
+
+		.link {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -5px;
+				height: 0.125rem;
+				width: 0;
+				background-color: black;
+				transition-property: all;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+				transition-duration: 300ms;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
+	}
+}

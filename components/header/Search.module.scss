@@ -1,0 +1,11 @@
+.search {
+	position: relative;
+	&::before {
+		background-color: #a49b8f;
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		position: absolute;
+		top: -25%;
+	}
+}

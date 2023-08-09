@@ -1,0 +1,28 @@
+.menu {
+	> nav {
+		> ul {
+			> li {
+				> a {
+					position: relative;
+
+					&::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: -5px;
+						height: 0.125rem;
+						width: 0;
+						background-color: black;
+						transition-property: all;
+						transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+						transition-duration: 300ms;
+					}
+
+					&:hover::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

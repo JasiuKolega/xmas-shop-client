@@ -1,0 +1,17 @@
+.variations {
+	@apply grid grid-cols-4 gap-2;
+
+	&.medium {
+		> button {
+			@apply text-sm;
+		}
+	}
+
+	> .button {
+		@apply h-5 transition-colors text-xs font-semibold uppercase px-2 border border-solid border-white bg-transparent text-white;
+
+		&.active {
+			@apply text-dark-green bg-white;
+		}
+	}
+}
